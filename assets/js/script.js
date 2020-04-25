@@ -6,4 +6,9 @@
 const email = "joao@hcode.com.br";
 
 console.log(email);
+
 console.log("O seu email é: " + email);
+
+// Template string: escrever a variável junto com texto sem concatenar.
+// Sintaxe: string entre crases, ${variável}
+console.log(`O seu email é: ${email}`);
