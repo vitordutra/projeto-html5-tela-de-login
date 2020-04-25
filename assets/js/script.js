@@ -39,5 +39,9 @@ document
 
 document.querySelector("#form-login").addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log("Formulário Enviado! Aqui vai o Ajax");
+  // querySelector(<ID HTML>)
+  let email = document.querySelector("#email").value;
+  let password = document.querySelector("#password").value;
+
+  console.log(email, password);
 });
