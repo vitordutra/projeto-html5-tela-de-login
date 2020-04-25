@@ -45,3 +45,48 @@ body {
   border-bottom-width: 2px;
   margin-bottom: 10px;
 }
+
+/* Fica laranja enquanto estamos digitando o email*/
+.content-center input:focus {
+  border-bottom-color: #d07335;
+}
+
+.content-center button {
+  background-color: #d07335;
+  color: #fff;
+}
+
+/*pseudo seletor hover
+  Fica mais escuro quando passa por cima com o mouse
+*/
+.content-center button:hover {
+  background-color: #b55b28;
+  cursor: pointer; /* Vira a mãozinha quando passa por cima*/
+}
+
+/* A cor muda conforme ele está sendo clicado */
+/* Feedback visual */
+.content-center button:active {
+  background-color: #c14e0e;
+}
+
+header a {
+  color: #666;
+  text-decoration: none;
+}
+
+header a:visited {
+  color: #000;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+header a:focus {
+  color: red;
+}
+
+header a:active {
+  color: yellow;
+}
