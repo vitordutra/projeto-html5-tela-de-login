@@ -61,16 +61,12 @@ document.querySelector("#form-login").addEventListener("submit", (e) => {
     password,
   };
 
-  console.log(json);
-
-  // Stringfy -> função nativa do navegador.
-  // usado para se comunicar com outras linguagens
-  let stringJSON = JSON.stringify(json);
-
-  console.log(stringJSON);
-
-  // parse de uma JSON stringficada para objeto real
-  let jsonParse = JSON.parse(stringJSON);
-
-  console.log(jsonParse);
+  // Defesa em camadas: várias camadas de validação
+  if (!json.email) {
+    console.error("O campo e-mail deve ser preenchido!");
+  } else if (!json.password) {
+    console.error("O campo senha deve ser preenchido!");
+  } else {
+    console.log("Campos validados com sucesso");
+  }
 });
