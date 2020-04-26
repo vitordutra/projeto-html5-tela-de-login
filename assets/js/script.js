@@ -43,5 +43,34 @@ document.querySelector("#form-login").addEventListener("submit", (e) => {
   let email = document.querySelector("#email").value;
   let password = document.querySelector("#password").value;
 
-  console.log(email, password);
+  // Datatype json. Declaração: {}
+  /* Notação de objeto -> Atributos e métodos
+        {<propriedade>:<variável>,
+         <proprieade>: <variavel>
+
+        }
+    Se <nome_variavel> = <nome_propriedade>
+        {
+         nome_variavel1,
+         nome variavel2,
+         ...
+        }
+    */
+  let json = {
+    email,
+    password,
+  };
+
+  console.log(json);
+
+  // Stringfy -> função nativa do navegador.
+  // usado para se comunicar com outras linguagens
+  let stringJSON = JSON.stringify(json);
+
+  console.log(stringJSON);
+
+  // parse de uma JSON stringficada para objeto real
+  let jsonParse = JSON.parse(stringJSON);
+
+  console.log(jsonParse);
 });
